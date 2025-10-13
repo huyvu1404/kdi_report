@@ -6,7 +6,12 @@ import streamlit as st
 import pandas as pd
 
 def create_app():
-    st.title("Auto Report")
+    st.set_page_config(
+        page_title="KDI Auto Report",
+        page_icon="📈",
+        layout="wide"
+    )
+    st.title("KDI Auto Report")
     # st.warning("Please upload Excel files with the field names like when export from CMS.")
 
     if "html_bytes" not in st.session_state:
