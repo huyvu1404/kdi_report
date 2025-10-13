@@ -1,0 +1,7 @@
+services:
+  kdi-app:
+    container_name: kdi-app
+    build: .
+    ports:
+      - "8502:8501"
+      
