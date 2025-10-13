@@ -3,7 +3,6 @@ from src.utils import get_priority_value
 from src.constants import HTML_TEMPLATE, CHANNEL_MAP
 
 def natural_join(names: list[str]) -> str:
-    """Ghép tên theo kiểu tự nhiên với màu sắc."""
     if not names:
         return ""
     if len(names) == 1:
