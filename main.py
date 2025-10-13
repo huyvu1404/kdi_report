@@ -6,8 +6,8 @@ import streamlit as st
 import pandas as pd
 
 def create_app():
-    st.title("Auto Report App")
-    st.warning("Please upload Excel files with the field names like when export from CMS.")
+    st.title("Auto Report")
+    # st.warning("Please upload Excel files with the field names like when export from CMS.")
 
     if "html_bytes" not in st.session_state:
         st.session_state["html_bytes"] = None
@@ -65,7 +65,7 @@ def create_app():
                     st.session_state["report_type"] = selection
                     st.rerun()
                 except Exception as e:
-                    st.error(f"Error processing files: {e}")
+                    st.error(f"Error occured. Please check the columns's name")
                     return
 
         else:        
@@ -98,7 +98,7 @@ def create_app():
                         st.session_state["report_type"] = selection
                         st.rerun()
                     except Exception as e:
-                        st.error(f"Error processing files: {e}")
+                        st.error(f"Error occured. Please check the columns's name")
                         return
     
     if st.session_state["html_bytes"]:
