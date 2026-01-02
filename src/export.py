@@ -25,6 +25,9 @@ def export_to_excel(df):
         "Sentiment", "SiteName", "Channel", "Author", "UrlTopic", "Labels", "Type",
         "Channel Group"
     ]
+    for col in selected_columns:
+        if col not in df.columns:
+            df[col] = ""
 
     vietnamese_columns = {
         "Title": "Bài đăng",
